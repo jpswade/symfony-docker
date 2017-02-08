@@ -1,4 +1,4 @@
 #!/bin/sh
-export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
+[[ -f /usr/local/bin/composer ]] || cp ${0} /usr/local/bin/composer && chmod 755 /usr/local/bin/composer
 echo "Current working directory: '"$(pwd)"'"
 docker run --rm -v $(pwd):/app -v ~/.ssh:/root/.ssh composer/composer $@

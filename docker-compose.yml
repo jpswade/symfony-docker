@@ -14,10 +14,12 @@ services:
         expose:
             - "9000"
         volumes:
-            - ./php:/var/www/php
-            - ./logs/php:/var/www/php/app/logs
+            - ./php:/var/www/html
+            - ./logs/php:/var/www/html/app/logs
         links:
             - db
+        environment:
+            SYMFONY_ENV: dev
     nginx:
         build: ./nginx
         ports:
