@@ -14,4 +14,6 @@ ADD https://raw.githubusercontent.com/php/php-src/master/php.ini-production /etc
 RUN sed -i "s/short_open_tag = Off/short_open_tag = On/" /etc/php.ini
 # NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
 RUN sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php.ini
+# @see https://github.com/docker/docker/issues/7198
+RUN usermod -u 1000 www-data
 CMD ["php-fpm", "-F"]

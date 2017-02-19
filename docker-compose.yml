@@ -15,11 +15,12 @@ services:
             - "9000"
         volumes:
             - ./php:/var/www/html
-            - ./logs/php:/var/www/html/app/logs
+            - ./logs/php:/var/www/html/var/logs
         links:
             - db
         environment:
             SYMFONY_ENV: dev
+
     nginx:
         build: ./nginx
         ports:

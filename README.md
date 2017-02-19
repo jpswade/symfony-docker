@@ -11,6 +11,10 @@ The easiest way to run the Docker environment is by using [docker-compose](https
 
     $ docker-compose up -d
 
+## Troubleshooting
+
+- [Make uid & gid configurable for shared volumes](https://github.com/docker/docker/issues/7198)
+
 ## Maintainer
 
 - [James Wade](http://wade.be/)
