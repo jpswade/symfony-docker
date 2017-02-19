@@ -1,7 +1,7 @@
-Symfony Standard Edition Docker
-===============================
+Symfony Docker
+==============
 
-Symfony Standard Edition is a fully-functional Symfony application that you can use as the skeleton for your new applications.
+This a fully-functional Symfony application that you can use as the skeleton for your new applications.
 
 With Docker, this provides you with the ideal environment to get started.
 
@@ -13,6 +13,7 @@ The easiest way to run the Docker environment is by using [docker-compose](https
 
 ## Troubleshooting
 
+- Symfony Standard Edition did not work as expected, so I switched to Symfony Demo instead.
 - [Make uid & gid configurable for shared volumes](https://github.com/docker/docker/issues/7198)
 
 ## Maintainer
