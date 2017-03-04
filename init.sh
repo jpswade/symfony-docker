@@ -5,7 +5,7 @@ eval $(docker-machine env)
 [[ $1 == 'kill' ]] && docker-compose kill
 [[ $1 == 'build' ]] && docker-compose build
 bin/composer >/dev/null
-composer install -o -n -d php
+bin/composer install -o -n -d php
 docker-compose up -d
 DOCKER_IP=$(docker-machine ip)
 echo http://${DOCKER_IP}
